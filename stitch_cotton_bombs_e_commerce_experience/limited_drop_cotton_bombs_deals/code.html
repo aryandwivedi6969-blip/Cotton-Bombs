@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Limited Drop - Cotton Bombs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Hanken+Grotesk:wght@400&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "outline": "#897083",
+                        "surface-container": "#eeeeee",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f1f1",
+                        "primary-container": "#ff00ff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#a5eeff",
+                        "tertiary-fixed": "#f3daff",
+                        "on-tertiary-fixed-variant": "#6e00ab",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#ffabf3",
+                        "secondary-fixed-dim": "#00daf8",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#ffabf3",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e3b5ff",
+                        "on-surface-variant": "#564052",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#510051",
+                        "secondary-container": "#00e0ff",
+                        "primary-fixed": "#ffd7f5",
+                        "primary": "#a900a9",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#a900a9",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#380038",
+                        "on-secondary-container": "#005f6d",
+                        "tertiary": "#9000de",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#44006d",
+                        "outline-variant": "#dcbed4",
+                        "on-tertiary-fixed": "#2f004c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#c168ff",
+                        "secondary": "#006877",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#810081",
+                        "on-secondary-fixed": "#001f25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "headline-lg-mobile": ["Bricolage Grotesque"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glitter-text {
+            background: linear-gradient(90deg, #ff00ff, #00e0ff, #ff00ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        .bouncy-hover:hover {
+            transform: scale(1.05);
+        }
+        .bouncy-active:active {
+            transform: scale(0.95);
+        }
+        .iridescent-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#1a1c1c, #1a1c1c) padding-box,
+                        linear-gradient(45deg, #ff00ff, #00e0ff) border-box;
+        }
+        .glow-btn {
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 224, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-on-surface min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-primary selection:text-on-primary dark">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-on-surface/10 dark:border-surface-variant/20 flat no shadows flex justify-between items-center w-full px-margin-desktop h-20 z-50">
+<div class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary dark:text-primary-fixed">Cotton Bombs</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:scale-105 transition-transform duration-200" href="#">Catalogue</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-label-caps text-label-caps hover:scale-105 transition-transform duration-200" href="#">Sales</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:scale-105 transition-transform duration-200" href="#">About</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps hover:scale-105 transition-transform duration-200" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200" data-icon="person">person</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section with Shader -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_2 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Iridescent base
+    vec3 color1 = vec3(1.0, 0.4, 0.8); // Hot Pink
+    vec3 color2 = vec3(0.6, 0.2, 1.0); // Electric Purple
+    vec3 color3 = vec3(0.4, 0.8, 1.0); // Sky Blue
+    
+    float t = u_time * 0.2;
+    vec2 p = uv * 3.0;
+    
+    float n1 = noise(p + t);
+    float n2 = noise(p - t * 0.7);
+    
+    vec3 finalColor = mix(color1, color2, sin(uv.x * 5.0 + t) * 0.5 + 0.5);
+    finalColor = mix(finalColor, color3, cos(uv.y * 3.0 - t * 0.5) * 0.5 + 0.5);
+    
+    // Glitter sparkle effect
+    float sparkle = pow(noise(uv * 100.0 + u_time * 5.0), 20.0);
+    finalColor += sparkle * 0.8;
+    
+    // Subtle movement
+    finalColor *= 0.9 + 0.1 * sin(u_time + uv.x * 10.0);
+    
+    gl_FragColor = vec4(finalColor * 0.95 + 0.05, 0.1); // Low alpha for background use
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_2 -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10"></div>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-stack-md">
+<span class="font-label-caps text-label-caps px-4 py-2 bg-primary/20 text-primary-fixed rounded-full border border-primary/50 backdrop-blur-sm">STRICTLY LIMITED</span>
+<h1 class="font-headline-xl text-headline-xl text-white glitter-text uppercase leading-none">The Neon<br/>Drop</h1>
+<!-- Countdown -->
+<div class="flex gap-4 mt-8 font-headline-lg text-headline-lg text-white">
+<div class="flex flex-col items-center bg-[#1a1c1c]/80 backdrop-blur-md p-4 rounded-lg border border-primary/30">
+<span>02</span>
+<span class="font-label-caps text-label-caps text-primary-fixed">DAYS</span>
+</div>
+<span class="self-center">:</span>
+<div class="flex flex-col items-center bg-[#1a1c1c]/80 backdrop-blur-md p-4 rounded-lg border border-primary/30">
+<span>14</span>
+<span class="font-label-caps text-label-caps text-primary-fixed">HRS</span>
+</div>
+<span class="self-center">:</span>
+<div class="flex flex-col items-center bg-[#1a1c1c]/80 backdrop-blur-md p-4 rounded-lg border border-primary/30">
+<span>59</span>
+<span class="font-label-caps text-label-caps text-primary-fixed">MIN</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Offers Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-7xl mx-auto relative z-20">
+<h2 class="font-headline-lg text-headline-lg text-white mb-stack-md text-center">Exclusive Bundles</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="iridescent-border rounded-xl p-6 flex flex-col gap-4 group bouncy-hover transition-all duration-300">
+<div class="h-48 w-full rounded-lg overflow-hidden relative">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" data-alt="A dark, high-contrast product shot of a sleek, neon-pink cotton candy tub sitting on a glossy black surface. Vibrant purple lighting accents the edges, creating a hyper-digital, minimal-maximalist streetwear aesthetic. Deep shadows and bright neon highlights define the premium, urgent vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-VoH8Efm_Pu1rvnrPQVB4OCs2e-PfyR0YzK8723PaeBLsxnOCWN8XgY7LkNIKWe2opHeLVSeBI-EHeaxQZdHEErXTzuMVDuUC4xzRU7uzeTYggzooCCJiHNvekFEUlSKgbe-8bBvGNc4r_oSe9ekRiLdk4EfC51-dXntkXxwrL14ugYN8pwLz99FmnMwfe7in48PMQ3O4dWVbBpIld5Pe-pjqnQaK0iMc0FwCJzJB1nbu3Dt0m6M0"/>
+<span class="absolute top-2 right-2 bg-primary text-white font-label-caps text-label-caps px-3 py-1 rounded-full">-20%</span>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-white">The Party Pack</h3>
+<p class="font-body-md text-surface-variant mt-2">6 exclusive neon flavors in holographic tubs.</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant/20">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">$49.99</span>
+<button class="bg-primary text-white font-label-caps text-label-caps px-6 py-3 rounded-full glow-btn bouncy-active transition-all">CLAIM NOW</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="iridescent-border rounded-xl p-6 flex flex-col gap-4 group bouncy-hover transition-all duration-300 md:col-span-2 lg:col-span-1">
+<div class="h-48 w-full rounded-lg overflow-hidden relative">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500" data-alt="A moody, high-contrast overhead shot of three metallic cotton candy pouches arranged dynamically on a matte black background. Neon cyan and magenta light streaks cut across the scene, giving it a futuristic, limited-edition streetwear feel. The glossy textures pop against the dark canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEM9XX8ByIf2dtvgz5uq7QgGSwU25FkZu3Y_dzcuTocZrT64BXXVXOvkpXvlXOwTXiraCGl0-AreZRAKNw_wH6i5hQ2CWYS7aK7qlzHCLsIju8iDWo0LTTvZH9rJZ7UeZ2EnIe2hqR0iSVC6N3qAGqkzMo9hGcEFo44_XfcQ-0b513K-puVbNgpCmUQ46z_VDUCWW8tOrlUGtvLQlUn9Pi18zkMci2F90bFAcE8aeYSFxkKKl9gV3N"/>
+<span class="absolute top-2 right-2 bg-secondary text-white font-label-caps text-label-caps px-3 py-1 rounded-full">SOLD OUT</span>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-white opacity-50">Solo Drop #1</h3>
+<p class="font-body-md text-surface-variant mt-2 opacity-50">The original glitch flavor. Gone forever.</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant/20">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-surface-variant/50 line-through">$19.99</span>
+<button class="bg-surface-variant/10 text-surface-variant/50 font-label-caps text-label-caps px-6 py-3 rounded-full cursor-not-allowed">MISSED IT</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim w-full py-stack-lg border-t border-outline-variant flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-4">Cotton Bombs</div>
+<p class="font-body-md text-body-md text-primary dark:text-primary-fixed">© 2024 Cotton Bombs. Sparkle Responsibly.</p>
+</div>
+<div class="flex flex-col gap-2 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Shipping Info</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

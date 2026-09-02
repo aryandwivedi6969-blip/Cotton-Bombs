@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cotton Bombs - About</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=Hanken+Grotesk:wght@400&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "outline": "#897083",
+                        "surface-container": "#eeeeee",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f1f1",
+                        "primary-container": "#ff00ff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#a5eeff",
+                        "tertiary-fixed": "#f3daff",
+                        "on-tertiary-fixed-variant": "#6e00ab",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#ffabf3",
+                        "secondary-fixed-dim": "#00daf8",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#ffabf3",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e3b5ff",
+                        "on-surface-variant": "#564052",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#510051",
+                        "secondary-container": "#00e0ff",
+                        "primary-fixed": "#ffd7f5",
+                        "primary": "#a900a9",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#a900a9",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#380038",
+                        "on-secondary-container": "#005f6d",
+                        "tertiary": "#9000de",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#44006d",
+                        "outline-variant": "#dcbed4",
+                        "on-tertiary-fixed": "#2f004c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#c168ff",
+                        "secondary": "#006877",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#810081",
+                        "on-secondary-fixed": "#001f25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "headline-lg-mobile": ["Bricolage Grotesque"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .holographic-gradient {
+            background: linear-gradient(135deg, #a900a9, #00daf8, #e3b5ff, #c168ff);
+            background-size: 300% 300%;
+            animation: holoFlow 8s ease infinite;
+        }
+
+        @keyframes holoFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-bouncy {
+            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-bouncy:active {
+            transform: scale(0.95);
+        }
+        .btn-bouncy:hover {
+            animation: wobble 0.5s ease-in-out;
+        }
+
+        @keyframes wobble {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.05) rotate(-2deg); }
+            50% { transform: scale(1.02) rotate(2deg); }
+            75% { transform: scale(1.04) rotate(-1deg); }
+            100% { transform: scale(1.05) rotate(0deg); }
+        }
+        
+        .foil-edge {
+            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+        }
+
+        .glitter-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+        .glitter-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.15"/></svg>');
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .glitter-overlay:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md font-label-caps text-label-caps docked full-width top-0 sticky border-b border-on-surface/10 flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 z-50">
+<div class="flex items-center gap-4">
+<a class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary" href="#">Cotton Bombs</a>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Catalogue</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Sales</a>
+<a class="text-primary border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-200" href="#">About</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-gutter">
+<button class="text-on-surface hover:text-primary transition-colors hover:scale-105 btn-bouncy flex items-center gap-2">
+<span class="hidden md:inline">Account</span>
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="text-on-surface hover:text-primary transition-colors hover:scale-105 btn-bouncy flex items-center gap-2">
+<span class="hidden md:inline">Cart</span>
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full">
+<!-- Hero Section: Split Screen -->
+<section class="min-h-[819px] flex flex-col md:flex-row border-b-4 border-on-surface">
+<div class="w-full md:w-1/2 p-margin-mobile md:p-margin-desktop flex flex-col justify-center bg-surface-container-lowest">
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-stack-md leading-none">Our<br/>Manifesto</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    We aren't just selling cotton candy. We're detonating flavor bombs that turn ordinary moments into hyper-vibrant memories. Welcome to the collision of nostalgic taste and internet-breaking aesthetic.
+                </p>
+<div class="mt-stack-lg">
+<button class="holographic-gradient text-on-primary font-label-caps text-label-caps py-4 px-8 rounded-full foil-edge btn-bouncy uppercase tracking-widest inline-flex items-center gap-2">
+                        Get the Drop
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 h-[512px] md:h-auto relative overflow-hidden bg-primary-container glitter-overlay">
+<img class="w-full h-full object-cover object-center absolute inset-0" data-alt="A dynamic, high-energy fashion editorial shot featuring a diverse Gen Z model holding an oversized, vibrant pink cotton candy cloud against a stark white backdrop. The lighting is harsh flash photography style, creating sharp shadows. The model wears edgy, iridescent streetwear. The mood is rebellious, maximalist, and highly saturated, perfectly suited for an Instagram drop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Nxm59dGBFO2ebO9V_cxiiKjaQIa8g98_lN_TpaKQ_zfYTgyvcSL45V9_WCimrOcG-E3e65w4dDW8rD3ybRY1TMUzTodKLQwJJpIFAiH7sghDe_0fXqnHWhU5NTHD72eFwpvSOw4QNIv2d0iEvJlsSkJ6BJlgVQW7DtDt7C-oBlEKOUBghP_RhbI0MT44caD4IvhZ8u_O9r478Sagfj6A6Yd199AqAbug8f7ZN8GooSSu8GKQHWYf"/>
+</div>
+</section>
+<!-- Holographic Divider -->
+<div class="h-4 w-full holographic-gradient"></div>
+<!-- Brand Story: Sparkling Responsibly -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 md:col-span-5 md:col-start-2 order-2 md:order-1 mt-stack-md md:mt-0 relative">
+<div class="absolute inset-0 bg-secondary-fixed/20 blur-2xl rounded-full transform -rotate-12 scale-110"></div>
+<img class="w-full h-auto aspect-square object-cover rounded-xl border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,28,1)] relative z-10" data-alt="A close-up, macro shot of artisanal cotton candy being spun. The texture is hyper-detailed, showing fine, glowing strands of iridescent blue and pink sugar catching the light. The background is a clean, minimalist off-white studio setting. The lighting is soft but focused on the crystalline structure of the sugar, emphasizing a premium, tactile, and 'sparkling' quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwALVaK1M1x1RNE3gfyumWAspL50m-4gtes4L0h4qBYelKe4nULx_ECCX-s8hScW-N24DJsT06xtISe35NYkxJDYmxstgoXK1EwIUltYWRvYKRksghS5ZZW9a6u_NsCm21oZa9uPEBptxFOOi4rtlIa6Cg9kZ2KqDpvPfvgKN2F3W6uRaKS2zZ5umMDBjxv25-TKJsrmYTt1rMbS7uM5PP0qrS0GzMTnXMAJDQY1un_MNPwMT1yO1U"/>
+</div>
+<div class="col-span-1 md:col-span-5 md:col-start-8 order-1 md:order-2">
+<div class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container font-label-caps text-label-caps mb-stack-sm uppercase border border-primary/20 foil-edge">The Ethos</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-md leading-tight">Sparkle Responsibly.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-sm">
+                        Every Cotton Bomb is crafted with organic cane sugar and plant-based food coloring. We obsess over the aesthetics so you can flex on the feed, but we never compromise on the ingredients.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Zero microplastics. 100% biodegradable sticks. Maximum visual impact. We engineered a treat that looks illegal but is totally clean.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Holographic Divider -->
+<div class="h-2 w-full holographic-gradient opacity-70"></div>
+<!-- Meet The Founders -->
+<section class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Architects</h2>
+<p class="font-label-caps text-label-caps text-primary mt-2">WHO DRIVES THE HYPE</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Founder 1 -->
+<div class="group relative overflow-hidden rounded-xl border-2 border-outline-variant hover:border-primary transition-colors duration-300 bg-surface">
+<div class="aspect-[4/5] relative overflow-hidden glitter-overlay">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A portrait of a young female co-founder shot in a gritty, high-contrast streetwear style. She is wearing oversized, vintage-inspired designer clothing with subtle holographic accents. The background is a clean, minimal concrete wall. Lighting is dramatic, with a slight neon pink rim light. She has a confident, edgy expression, embodying modern Gen Z entrepreneurial energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX-RjWeriIjoCLF8vNnFP8C0m6LdmYzQT43DwCPzSLJHylAuT95IIOGKEXu59w3tNWJ7nx1Wp_3ewehX1-e8kgSDutWPnHwzJECSCg1RZN8S41CUSgSpPfUyg-TxdMyFsthBBgUx3axz-w-0SeYfG3LIlbyBnttpyz4sKi_pvlLPhQ2QKRbXnK7smWmgaFFZKUMSZr6eUIC1MmXvJsWugZjoRX6brORePQv8MYPHV2yzd02LoGnTJy"/>
+<div class="absolute bottom-0 left-0 w-full p-stack-md bg-gradient-to-t from-on-surface/90 to-transparent">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest leading-none">Lexi</h3>
+<p class="font-label-caps text-label-caps text-primary-fixed mt-1">Chief Flavor Officer</p>
+</div>
+</div>
+</div>
+<!-- Founder 2 -->
+<div class="group relative overflow-hidden rounded-xl border-2 border-outline-variant hover:border-primary transition-colors duration-300 bg-surface md:translate-y-12">
+<div class="aspect-[4/5] relative overflow-hidden glitter-overlay">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A portrait of a young male co-founder shot in a gritty, high-contrast streetwear style. He wears a heavy, structured tech-wear jacket over a simple white tee. The background is a stark, minimal studio setup. Lighting features a cool, cyanish-blue rim light. He looks directly at the camera with a serious, focused intensity, representing the brand's sharp, design-forward identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIf0s1gwXTXLi2MCMvP29KX5w6fGsM1sAqbeYz7YQcxS8LPvGBsTrZbeW7tRy-TV8GrDZQWUOor1Ns0O_SiJtCwx1aWOPtyPol4SITrBvkLWEJW50JakotxyPLQ8NznLUUQe9qWXFL02m7v_vzcldckclmzrCgYDNWApuo7xpdYitQZNgYsJu2POV-66iNN7yZmfQoC7MsE0I3zxuaoCmB9K76VAq1QEYDX6cmO-nJkNo1m3wGUsGO"/>
+<div class="absolute bottom-0 left-0 w-full p-stack-md bg-gradient-to-t from-on-surface/90 to-transparent">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest leading-none">Jaxon</h3>
+<p class="font-label-caps text-label-caps text-secondary-fixed mt-1">Creative Director</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full py-stack-lg border-t border-outline-variant flat grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface italic font-black">Cotton Bombs</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm">
+                © 2024 Cotton Bombs. Sparkle Responsibly.
+            </p>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Shipping Info</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Contact Us</a>
+</div>
+</footer>
+</body></html>

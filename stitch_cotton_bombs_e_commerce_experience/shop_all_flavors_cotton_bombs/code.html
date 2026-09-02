@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catalogue - Cotton Bombs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "outline": "#897083",
+                        "surface-container": "#eeeeee",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f1f1",
+                        "primary-container": "#ff00ff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#a5eeff",
+                        "tertiary-fixed": "#f3daff",
+                        "on-tertiary-fixed-variant": "#6e00ab",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "inverse-primary": "#ffabf3",
+                        "secondary-fixed-dim": "#00daf8",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#ffabf3",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e3b5ff",
+                        "on-surface-variant": "#564052",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#510051",
+                        "secondary-container": "#00e0ff",
+                        "primary-fixed": "#ffd7f5",
+                        "primary": "#a900a9",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#a900a9",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#380038",
+                        "on-secondary-container": "#005f6d",
+                        "tertiary": "#9000de",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#44006d",
+                        "outline-variant": "#dcbed4",
+                        "on-tertiary-fixed": "#2f004c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#c168ff",
+                        "secondary": "#006877",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#810081",
+                        "on-secondary-fixed": "#001f25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "64px",
+                        "stack-md": "24px",
+                        "gutter": "16px",
+                        "stack-sm": "8px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "headline-lg-mobile": ["Bricolage Grotesque"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .iridescent-border {
+            position: relative;
+        }
+        .iridescent-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, theme('colors.primary'), theme('colors.secondary-container'), theme('colors.tertiary-container'));
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.5;
+            transition: opacity 0.3s ease, inset 0.3s ease;
+        }
+        .iridescent-border:hover::before {
+            opacity: 1;
+            inset: -2px;
+        }
+        
+        .bouncy-btn {
+            transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bouncy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .glitter-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.1"/></svg>');
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+        
+        .product-card:hover .glitter-overlay {
+            opacity: 1;
+        }
+
+        /* Confetti Animation */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: theme('colors.primary');
+            opacity: 0;
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md font-label-caps text-label-caps full-width top-0 sticky border-b border-on-surface/10 flex justify-between items-center w-full px-margin-desktop h-20 z-50">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary">Cotton Bombs</span>
+</div>
+<nav class="hidden md:flex gap-stack-md items-center">
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-200" href="#">Catalogue</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Sales</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">About</a>
+<a class="text-on-surface hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-stack-sm text-primary">
+<button aria-label="Search" class="bouncy-btn p-2 flex items-center justify-center hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Account" class="bouncy-btn p-2 flex items-center justify-center hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button aria-label="Cart" class="bouncy-btn p-2 flex items-center justify-center hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col md:flex-row w-full max-w-[1920px] mx-auto pt-stack-md md:pt-stack-lg">
+<!-- Filter Sidebar -->
+<aside class="w-full md:w-64 flex-shrink-0 px-margin-mobile md:px-margin-desktop mb-stack-md md:mb-0">
+<div class="sticky top-28 bg-surface-container-lowest p-stack-md rounded-lg border border-outline-variant">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-stack-sm">Filter</h2>
+<div class="mb-stack-md">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-unit uppercase">Flavor</h3>
+<div class="flex flex-col gap-unit">
+<label class="flex items-center gap-unit cursor-pointer hover:text-primary">
+<input checked="" class="form-checkbox text-primary rounded border-outline-variant bg-surface" type="checkbox"/>
+<span>Blueberry Burst</span>
+</label>
+<label class="flex items-center gap-unit cursor-pointer hover:text-primary">
+<input checked="" class="form-checkbox text-primary rounded border-outline-variant bg-surface" type="checkbox"/>
+<span>Strawberry Sparkle</span>
+</label>
+<label class="flex items-center gap-unit cursor-pointer hover:text-primary">
+<input checked="" class="form-checkbox text-primary rounded border-outline-variant bg-surface" type="checkbox"/>
+<span>Neon Lime</span>
+</label>
+<label class="flex items-center gap-unit cursor-pointer hover:text-primary">
+<input checked="" class="form-checkbox text-primary rounded border-outline-variant bg-surface" type="checkbox"/>
+<span>Galaxy Grape</span>
+</label>
+</div>
+</div>
+<div class="mb-stack-md">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-unit uppercase">Pack Size</h3>
+<div class="flex flex-wrap gap-unit">
+<button class="px-3 py-1 border border-outline-variant rounded-full text-on-surface hover:border-primary hover:text-primary text-sm">Single</button>
+<button class="px-3 py-1 bg-primary text-on-primary rounded-full font-bold text-sm">4-Pack</button>
+<button class="px-3 py-1 border border-outline-variant rounded-full text-on-surface hover:border-primary hover:text-primary text-sm">12-Pack</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Canvas -->
+<section class="flex-grow px-margin-mobile md:pr-margin-desktop md:pl-0 pb-stack-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<article class="product-card group bg-surface-container-lowest rounded-xl flex flex-col iridescent-border relative overflow-hidden">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container rounded-t-xl">
+<img alt="Blueberry Burst" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A macro studio shot of a vibrant blue sparkling drink in a sleek clear can, covered in condensation. The liquid inside glitters heavily. Set against a stark white background with a subtle blue holographic reflection on the surface beneath it. High-contrast, sharp, modern streetwear aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSHrnjE58IrUlhLQgH-cbGhbHTdiwIv2l6D8l32VbMqr3g2tq1uOdLgni9v0ccP_QqRcrXwLHmbIOsG5kpzU_M-tQc6TcqJPyOHyAsV--B0C1StVGO0p-_DfAuMyDfy4hI1gZc_7ns2AejJUvAYAyxGQmJv1pIZG4fC1gVAw_FSFvtiX5sENtBVSZJ4PssCsHTZfEXx9sB68fy8MXS92c-9o3pGPTMY7ray0axyKvLDpdsBE7CLPcM"/>
+<div class="glitter-overlay"></div>
+<span class="absolute top-2 left-2 bg-gradient-to-r from-primary to-tertiary text-on-primary font-label-caps text-label-caps px-2 py-1 rounded-full uppercase z-10 shadow-[inset_0_0_8px_rgba(255,255,255,0.4)]">New Flavor</span>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight mb-1">Blueberry Burst</h3>
+<p class="text-on-surface-variant text-sm">Electric blue glitter bomb.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-bold text-lg text-primary">$4.99</span>
+<button class="add-to-cart-btn bouncy-btn bg-on-surface text-surface px-4 py-2 rounded-full font-label-caps text-label-caps uppercase hover:bg-primary transition-colors flex items-center gap-1">
+                                Add <span class="material-symbols-outlined text-[16px]" data-icon="add" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="product-card group bg-surface-container-lowest rounded-xl flex flex-col iridescent-border relative overflow-hidden">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container rounded-t-xl">
+<img alt="Strawberry Sparkle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A macro studio shot of a vibrant pink sparkling drink in a sleek clear can, covered in condensation. The liquid inside glitters heavily. Set against a stark white background with a subtle pink holographic reflection on the surface beneath it. High-contrast, sharp, modern streetwear aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATWx_yhMYyIwvo5JA1rH7bBLuCcMh6tp0yudAZPBHx86ADFPKkDNkiLxkeHFVY0xxcR1vZnntuYw1aUdTgn4Zi7A5IyPT2SdAm1KMHmQc3VXqPLTTk15NKCtQUIuFQZ5yKcsjuWB0pBpjBYz4yY5-jv76C_Sfn1DrtUiHpQMdS-DZovMLcRbP8o-5-3Zv0l1t--ZoipqBjNNPWa4rJc8Wvw_4p8f_UOmpKAuU3hMhQcXBgf9kfWOMA"/>
+<div class="glitter-overlay"></div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight mb-1">Strawberry Sparkle</h3>
+<p class="text-on-surface-variant text-sm">Sweet pink glitter bomb.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-bold text-lg text-primary">$4.99</span>
+<button class="add-to-cart-btn bouncy-btn bg-on-surface text-surface px-4 py-2 rounded-full font-label-caps text-label-caps uppercase hover:bg-primary transition-colors flex items-center gap-1">
+                                Add <span class="material-symbols-outlined text-[16px]" data-icon="add" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="product-card group bg-surface-container-lowest rounded-xl flex flex-col iridescent-border relative overflow-hidden col-span-1 sm:col-span-2 lg:col-span-1 xl:col-span-2">
+<div class="relative aspect-[4/5] sm:aspect-[2/1] overflow-hidden bg-surface-container rounded-t-xl">
+<img alt="Neon Lime Party Pack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A wide, dynamic studio shot of multiple neon green sparkling drinks in sleek clear cans, covered in condensation. The liquid inside glitters heavily. Splashes of glittery green liquid are frozen in mid-air. Set against a stark white background with a subtle green holographic reflection. High-contrast, sharp, modern streetwear aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3JHG6v6O7QxL3SdHtv-V3ivisMEvyggwwIv3V8BzxmFAQYks3oyq6hx21MiOhyiC90V7E1br4XI3Mc0FcqCXkhTm5_YXMrPbmz0knNzIR508A0YEfoqgwMHpraYnzhpqJwaHsAIT9MwSSx5LD10rdj7Nf86H4Xl9Z2xouYyXxsEHqGszzQes7LLdGtAuyaJqdsJlOXiW2u4uqRjSl99hwbZJpeGnR3yzoh2lkAcjubuDMZ9mBA12U"/>
+<div class="glitter-overlay"></div>
+<span class="absolute top-2 left-2 bg-surface text-on-surface font-label-caps text-label-caps px-2 py-1 rounded-full uppercase z-10 border border-outline">Best Value</span>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface leading-tight mb-1">Neon Lime (12-Pack)</h3>
+<p class="text-on-surface-variant text-sm">Tangy green glitter bomb bulk pack.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-bold text-xl text-primary">$49.99</span>
+<button class="add-to-cart-btn bouncy-btn bg-gradient-to-r from-primary to-tertiary text-on-primary px-6 py-3 rounded-full font-label-caps text-label-caps uppercase shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] flex items-center gap-2">
+                                Add To Cart <span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="product-card group bg-surface-container-lowest rounded-xl flex flex-col iridescent-border relative overflow-hidden">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container rounded-t-xl">
+<img alt="Galaxy Grape" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out grayscale opacity-70" data-alt="A macro studio shot of a deep purple sparkling drink in a sleek clear can, covered in condensation. The liquid inside glitters heavily with a cosmic swirl effect. Set against a stark white background with a subtle purple holographic reflection. High-contrast, sharp, modern streetwear aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6zVeLy5FpVNND_b55I0JLVqSDdbVIBO0dalwx2m9Y1vKBTghk_go2mTSzRRW4XLu2_jNV7cVOjCKDQKy7G8dHEc1eq8hB9xqijKQW9OFK4twiVrQHzSuMRQHcUbkPvfJFP8dA7QfgHgpL7dUbBABvG4hxWRcQAbTz7-zSI-QqPqVXJsmtmGTv0ipitukPavcMznkTIVeRxUOA34RZODss3BDx_GEAYvPIOMf4riQqJ4pn6pAUiQEZ"/>
+<div class="glitter-overlay"></div>
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-[2px] flex items-center justify-center">
+<span class="bg-surface text-on-surface font-label-caps text-label-caps px-3 py-1 rounded-full uppercase border border-outline shadow-md transform -rotate-12">Sold Out</span>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between opacity-70">
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight mb-1">Galaxy Grape</h3>
+<p class="text-on-surface-variant text-sm">Deep space glitter bomb.</p>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-bold text-lg text-on-surface-variant line-through">$4.99</span>
+<button class="bg-surface-variant text-on-surface-variant px-4 py-2 rounded-full font-label-caps text-label-caps uppercase cursor-not-allowed" disabled="">
+                                Out of Stock
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest font-body-md text-body-md w-full py-stack-lg border-t border-outline-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1920px] mx-auto">
+<div class="col-span-1 md:col-span-2 mb-stack-md md:mb-0">
+<span class="font-headline-lg text-headline-lg text-on-surface italic font-black block mb-unit">Cotton Bombs</span>
+<p class="text-on-surface-variant text-sm">© 2024 Cotton Bombs. Sparkle Responsibly.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-unit">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-unit">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Shipping Info</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<!-- Confetti Container -->
+<div class="confetti-container" id="confetti-container"></div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addButtons = document.querySelectorAll('.add-to-cart-btn');
+            const confettiContainer = document.getElementById('confetti-container');
+            const colors = ['#a900a9', '#00e0ff', '#c168ff', '#ffffff'];
+
+            addButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = rect.left + rect.width / 2;
+                    const y = rect.top + rect.height / 2;
+
+                    for (let i = 0; i < 30; i++) {
+                        createConfetti(x, y);
+                    }
+                });
+            });
+
+            function createConfetti(x, y) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                confetti.style.left = `${x}px`;
+                confetti.style.top = `${y}px`;
+                
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.backgroundColor = color;
+                
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 50 + Math.random() * 100;
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity - 50; 
+
+                confetti.animate([
+                    { transform: `translate(0, 0) scale(1)`, opacity: 1 },
+                    { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 600 + Math.random() * 400,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    fill: 'forwards'
+                });
+
+                confettiContainer.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 1000);
+            }
+        });
+    </script>
+</body></html>

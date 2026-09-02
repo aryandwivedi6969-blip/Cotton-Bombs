@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blueberry Burst Cotton Bomb - Cotton Bombs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&amp;family=Bricolage+Grotesque:wght@400..800&amp;family=Hanken+Grotesk:wght@400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e2",
+                    "outline": "#897083",
+                    "surface-container": "#eeeeee",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-container": "#ff00ff",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-fixed": "#a5eeff",
+                    "tertiary-fixed": "#f3daff",
+                    "on-tertiary-fixed-variant": "#6e00ab",
+                    "on-secondary-fixed-variant": "#004e5a",
+                    "on-surface": "#1a1c1c",
+                    "surface": "#f9f9f9",
+                    "inverse-primary": "#ffabf3",
+                    "secondary-fixed-dim": "#00daf8",
+                    "surface-dim": "#dadada",
+                    "primary-fixed-dim": "#ffabf3",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e3b5ff",
+                    "on-surface-variant": "#564052",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-container": "#510051",
+                    "secondary-container": "#00e0ff",
+                    "primary-fixed": "#ffd7f5",
+                    "primary": "#a900a9",
+                    "on-background": "#1a1c1c",
+                    "surface-tint": "#a900a9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#380038",
+                    "on-secondary-container": "#005f6d",
+                    "tertiary": "#9000de",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#44006d",
+                    "outline-variant": "#dcbed4",
+                    "on-tertiary-fixed": "#2f004c",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "background": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-container": "#c168ff",
+                    "secondary": "#006877",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed-variant": "#810081",
+                    "on-secondary-fixed": "#001f25"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-lg": "64px",
+                    "stack-md": "24px",
+                    "gutter": "16px",
+                    "stack-sm": "8px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "label-caps": [
+                            "Space Grotesk"
+                    ],
+                    "headline-xl": [
+                            "Bricolage Grotesque"
+                    ],
+                    "headline-lg-mobile": [
+                            "Bricolage Grotesque"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Bricolage Grotesque"
+                    ]
+            },
+            "fontSize": {
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-xl": [
+                            "80px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .holo-border {
+            position: relative;
+            z-index: 1;
+        }
+        .holo-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            background: linear-gradient(45deg, rgba(255,0,255,0.8), rgba(0,255,255,0.8), rgba(255,255,0,0.8));
+            border-radius: inherit;
+            padding: 1px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        .holo-border:hover::before {
+            opacity: 1;
+        }
+        
+        .btn-bouncy {
+            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-bouncy:active {
+            transform: scale(0.95);
+        }
+        .btn-bouncy:hover {
+            animation: wobble 0.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes wobble {
+            0% { transform: rotate(-1deg) scale(1.02); }
+            100% { transform: rotate(1deg) scale(1.02); }
+        }
+
+        .holo-gradient-bg {
+            background: linear-gradient(135deg, rgba(169,0,169,0.8), rgba(0,224,255,0.8), rgba(193,104,255,0.8));
+            background-size: 200% 200%;
+            animation: holoFlow 5s ease infinite;
+        }
+        @keyframes holoFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .foil-glow {
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-on-surface/10 dark:border-surface-variant/20 flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 z-50">
+<a class="font-headline-lg-mobile text-headline-lg-mobile italic font-black text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 ease-out" href="#">
+            Cotton Bombs
+        </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:scale-105 duration-200 active:scale-95 ease-out" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 hover:scale-105 duration-200 active:scale-95 ease-out" href="#">Catalogue</a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:scale-105 duration-200 active:scale-95 ease-out" href="#">Sales</a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:scale-105 duration-200 active:scale-95 ease-out" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:scale-105 duration-200 active:scale-95 ease-out" href="#">Blog</a>
+</div>
+<div class="flex gap-gutter items-center">
+<button class="font-label-caps text-label-caps text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 ease-out flex items-center gap-1">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button class="font-label-caps text-label-caps text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 ease-out flex items-center gap-1">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="hidden md:inline">Account</span>
+</button>
+<button class="font-label-caps text-label-caps text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200 active:scale-95 ease-out flex items-center gap-1">
+<span class="material-symbols-outlined" data-icon="shopping_cart" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+<span class="hidden md:inline">Cart</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-[1600px] mx-auto">
+<!-- Split-screen Layout Fold -->
+<section class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-80px)]">
+<!-- Left Gallery (7 Columns) -->
+<div class="lg:col-span-7 p-margin-mobile md:p-margin-desktop bg-surface-container-lowest flex flex-col gap-gutter overflow-y-auto" style="scrollbar-width: none;">
+<!-- Main Featured Video/Image Placeholder -->
+<div class="relative w-full aspect-square rounded-xl overflow-hidden holo-border">
+<img class="w-full h-full object-cover" data-alt="A highly detailed, 4k macro shot of a bright blue and purple cotton candy bomb exploding in mid-air against a pristine white studio background. The explosion releases tiny holographic edible glitter particles and swirling wisps of deep violet sugar smoke. High-key lighting highlights the textural crunch of the outer shell and the fluffy, ethereal interior. The aesthetic is extremely vibrant, modern, and hyper-tactile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFH8jjLCNNtGUY10y5WxyY49WPpFOmMHsj_gRU34ss3KlrwN9YYB-S38bjY5NOspBf6A9p0XdseQQTksxR7hn5IScrigN9zpHOFJBgRu_vTz1dXI5S_Ywunr5FIrtdqN7hyWnuK534ryJdU5mVrQnf0GNV5L_b_R1vIpi9KZLoQ_crnyQXEE6LAIWnK9UDhEKKTSGPJfMN2QJSVlPjE7lq-vsaKlKlCHR6rf9_YPVMDRxpbn1KQAeP"/>
+<!-- Glitter Badge -->
+<div class="absolute top-4 left-4 holo-gradient-bg foil-glow rounded-full px-4 py-1 flex items-center gap-2 z-10 backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-white">New Flavor</span>
+</div>
+</div>
+<!-- Bento Grid for Secondary Media -->
+<div class="grid grid-cols-2 gap-gutter h-[500px]">
+<div class="relative w-full h-full rounded-xl overflow-hidden holo-border col-span-1">
+<img class="w-full h-full object-cover" data-alt="A sleek, overhead product shot of the 'Blueberry Burst' cotton candy bomb resting on a metallic silver grid surface. The lighting casts harsh, streetwear-style drop shadows. The vibrant electric blue color of the sugar sphere contrasts sharply with the minimalist industrial background. Small droplets of blue syrup are scattered playfully around it." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2jvOs4V_6eR50PK_sut3N5vTs4XnJ6vIdFbgxgpNo32vCFvtx4xZEYbqtDZH-lg-Q0Fpa0ji285t6xW9Z8QBG9bjUlZjsiJD0i5x2dJaYcngiEkrPfEuCa4uYIDz9KyS0MV1D4w_Wg_CGjI2FpqjI-Iskbq0gI1w3jk7Su__AECxKsKIol7f-pMnVkz5_4yVFW45TbGAZFXZ4f1BZ-ZvrnvpHnUTUO_85dAmVqs5GMUac4tpUZXqR"/>
+</div>
+<div class="grid grid-rows-2 gap-gutter col-span-1">
+<div class="relative w-full h-full rounded-xl overflow-hidden holo-border">
+<img class="w-full h-full object-cover" data-alt="A close-up lifestyle shot of a young adult holding the Blueberry Burst cotton bomb in their hand against a soft blurred background of a neon-lit city street at dusk. The focus is on the shiny, slightly textured surface of the blue and purple candy. The mood is energetic, modern, and candid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0BCK_Rosy8-Kq8ae4FgPrWXZW5aOdmr8rSM5bmfB64ityR3VJthT9baCyz2kL3bVxDthd6dxSrE_vPO3oQ3sBa4YmJ6rJvGwBwrBp2M3Z6OlbOt5QgbLjZH2jmdEg2rsbpp3RHR1NOcW2N6-iZtDXxK4lGSrG0OiovuHkUV3PCaQT-InxqnkZf17KwDW8PVclmKn2hplE598Ong1fO7eTDIIwV2spLJozu-1DEsdqyplF4I4EgNiW"/>
+</div>
+<div class="relative w-full h-full rounded-xl overflow-hidden holo-border flex items-center justify-center bg-surface-container-low group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A dynamic action shot capturing the exact moment the Blueberry Burst bomb hits a liquid surface, sending dramatic splashes of iridescent blue and purple liquid outwards. The background is a stark white void, emphasizing the vivid colors of the explosion. The lighting is strobe-like, freezing the motion perfectly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNSgpgtJGE8stvIepICq0ljQtziwFzhHQg6igNfuzX4CiSSBg6Fim59LXJDSTyj1Y10kAUcC2x7PlsAjysLan5u8wq2KbuPwWNp19diby754BqiudnvF-0W0MaB3NI3CmDfjw-QovjXxum7ObokREGXzaG-O-rAfWUDxPvw-lFaM7wAkhBg6A2KP5wNq8hmV1hugNkLowl2Ew6X5QrvL-ddvzfdXcASCo6qfvXVjMjEg8bjLfe3oXV"/>
+<div class="relative z-10 bg-surface/50 backdrop-blur-sm rounded-full p-4 flex items-center justify-center text-primary holo-border">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1; font-size: 32px;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sticky Panel (5 Columns) -->
+<div class="lg:col-span-5 p-margin-mobile md:p-margin-desktop bg-surface lg:sticky lg:top-20 lg:h-[calc(100vh-80px)] flex flex-col justify-center gap-stack-md border-l border-outline-variant">
+<div class="flex flex-col gap-unit">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary font-black uppercase tracking-tighter">Blueberry Burst</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">The original electric-blue explosion. Tangy, loud, and excessively sparkly.</p>
+</div>
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-black">
+                    $12.00
+                </div>
+<!-- How it works -->
+<div class="bg-surface-container rounded-lg p-6 border-4 border-primary/10">
+<h3 class="font-label-caps text-label-caps text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                        How to Detonate
+                    </h3>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-3">
+<span class="font-bold text-primary">1.</span> Drop it in your favorite clear beverage.
+                        </li>
+<li class="flex items-start gap-3">
+<span class="font-bold text-primary">2.</span> Watch the sugar shell dissolve into a sparkly galaxy.
+                        </li>
+<li class="flex items-start gap-3">
+<span class="font-bold text-primary">3.</span> Drink the burst. Sparkle responsibly.
+                        </li>
+</ul>
+</div>
+<!-- Quantity & Add to Cart -->
+<div class="flex flex-col gap-4 mt-auto lg:mt-stack-md">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Quantity</span>
+<div class="flex items-center gap-4">
+<button class="w-8 h-8 rounded-full border border-outline hover:bg-surface-variant flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<span class="font-body-md text-body-md font-bold w-4 text-center">1</span>
+<button class="w-8 h-8 rounded-full border border-outline hover:bg-surface-variant flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl font-label-caps text-label-caps holo-gradient-bg foil-glow text-white flex items-center justify-center gap-2 btn-bouncy mt-4">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                        Add to Cart - $12.00
+                    </button>
+</div>
+</div>
+</section>
+<!-- Nutrition & Ingredients Holographic Accordion -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-3xl mx-auto">
+<details class="group bg-surface-container-lowest rounded-xl holo-border overflow-hidden cursor-pointer" open="">
+<summary class="flex justify-between items-center p-6 font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold list-none">
+                        Nutrition &amp; Ingredients
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</summary>
+<div class="p-6 pt-0 border-t border-surface-variant text-on-surface-variant font-body-md text-body-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">Ingredients</h4>
+<p>Cane Sugar, Corn Syrup, Citric Acid, Natural Blueberry Flavor, Blue 1, Red 3, Edible Mica-Based Pearlescent Pigment (Titanium Dioxide).</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">Nutrition Facts</h4>
+<ul class="space-y-1">
+<li class="flex justify-between border-b border-surface-variant pb-1"><span>Calories</span> <span class="font-bold text-on-surface">120</span></li>
+<li class="flex justify-between border-b border-surface-variant pb-1"><span>Total Sugars</span> <span class="font-bold text-on-surface">28g</span></li>
+<li class="flex justify-between pb-1"><span>Sparkle Energy</span> <span class="font-bold text-primary">100%</span></li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<!-- Related Products (3-Column Grid) -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-background border-t border-outline-variant">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-black uppercase mb-stack-md text-center">More Bombs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Related Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:holo-border transition-all flex flex-col h-full border-4 border-transparent hover:border-black/5 dark:hover:border-white/5">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A product shot of a bright pink 'Strawberry Supernova' cotton candy bomb, gleaming under studio lights against a stark white background. The shiny pink sugar shell is speckled with edible silver stars." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MS5ojeoAijAiNC-cYmEEZAZCVZUwBkVAEpDcBrtEWrCQkN1_NIvsuWK42au0sreHMQ3WDg6Lir3f2V7Sjhw9G51U6vqKOYd08xLWYd5dD0aSRYDrEfgnsz9ald2nGwTt0mjPDWRPTtSwV9BBNGing0rBHhH6svOrilxxTBgf1PmRI7xKC65AVxP4FLhjEoTmH46CfoEcDVb71Ju-ruvH5ulnU7mbaxqDuCHKs9EHMX6tsz_G7kHm"/>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity mix-blend-overlay"></div>
+</div>
+<div class="p-4 flex flex-col gap-2 flex-grow bg-surface">
+<h3 class="font-label-caps text-label-caps text-primary uppercase">Strawberry Supernova</h3>
+<p class="font-body-md text-body-md text-on-surface font-bold mt-auto">$12.00</p>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:holo-border transition-all flex flex-col h-full border-4 border-transparent hover:border-black/5 dark:hover:border-white/5">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A product shot of a neon green 'Sour Apple Shock' cotton candy bomb, glowing vibrantly under harsh, dramatic studio lighting against a minimalist light grey backdrop. The green shell has a slightly frosted texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_VPAuCeYKpTuWXaHzoVhD1g7tgxCAUI8HLDlYZOtWxpYnMr7XaM7t9DsQ1BoTujNOtYVQ9nJTYT2bkcGOD0fnt_6Q4E_p73ShmkFkR5y-cp7ZUt_ORbrI46F_qFMuaJ0qnkQy4C6w4IsPhs2dg183uQx_Sdlbb3YQWqlXibI-ih8qTXFuv1nVXCELy5QSLD0gwIjLyMxxG8NdAtfUYFGOZqsdxk16HZ2QsnA0Yw1KZpunq2Cb7pSk"/>
+<div class="absolute top-2 right-2 bg-error text-on-error font-label-caps text-label-caps px-2 py-1 rounded-full z-10">
+                            Sold Out
+                        </div>
+</div>
+<div class="p-4 flex flex-col gap-2 flex-grow bg-surface opacity-75">
+<h3 class="font-label-caps text-label-caps text-primary uppercase">Sour Apple Shock</h3>
+<p class="font-body-md text-body-md text-on-surface font-bold mt-auto">$12.00</p>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:holo-border transition-all flex flex-col h-full border-4 border-transparent hover:border-black/5 dark:hover:border-white/5">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A product shot of a dark purple and black swirl 'Galactic Grape' cotton candy bomb against a clean white background. The lighting emphasizes the deep, rich colors and the subtle metallic sheen of the edible glitter mixed into the sugar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXYTrHPueB-xKw6fd-BjuHTIz0fbQZzgWi1PznHC1Rb_TVBn_95Eei3OxR5xy8zOVUNMS_bClRqGZYY_NPBKabX1g8yc9ZXB_Mh6hVUTZIC0-QMNE3YlnQC35gm-nsTIXHEjfGFUpKDxREV0ECKZJniYXg8dNpzCa063_iHdUiRNU2MkM31zKfJCEbYtAGNqAEG_aIY2aPyBuAeyzhX4yfFfc8wQ7F5D_dZO9DRk_kA-iuoe2mAo2H"/>
+</div>
+<div class="p-4 flex flex-col gap-2 flex-grow bg-surface">
+<h3 class="font-label-caps text-label-caps text-primary uppercase">Galactic Grape</h3>
+<p class="font-body-md text-body-md text-on-surface font-bold mt-auto">$12.00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim w-full py-stack-lg border-t border-outline-variant flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1600px] mx-auto">
+<div class="md:col-span-4 mb-stack-md">
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface italic font-black">Cotton Bombs</span>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary active:opacity-80" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary active:opacity-80" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary active:opacity-80" href="#">Shipping Info</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:underline decoration-primary active:opacity-80" href="#">Contact Us</a>
+</div>
+<div class="md:col-span-4 mt-stack-lg pt-stack-md border-t border-outline/20">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Cotton Bombs. Sparkle Responsibly.</p>
+</div>
+</div>
+</footer>
+</body></html>
