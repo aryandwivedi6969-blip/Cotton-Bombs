@@ -1,6 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+function removeDirSync(dirPath) {
+  if (fs.existsSync(dirPath)) {
+    fs.rmSync(dirPath, { recursive: true, force: true });
+  }
+}
+
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return;
   fs.mkdirSync(dest, { recursive: true });
@@ -18,6 +24,9 @@ function copyDir(src, dest) {
 
 const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
 const rootDist = path.join(__dirname, '..', 'dist');
+
+console.log(`Cleaning target directory ${rootDist}...`);
+removeDirSync(rootDist);
 
 console.log(`Copying ${frontendDist} to ${rootDist}...`);
 copyDir(frontendDist, rootDist);
